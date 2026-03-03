@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #C5A059;
+  --color-gold-light: #D4B87A;
+  --color-ink: #111111;
+  --color-sub: #666666;
+  --color-surface: #FAFAF8;
+  --font-serif: 'Noto Serif JP', '游明朝', 'Yu Mincho', serif;
+  --font-sans: 'Noto Sans JP', system-ui, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #111111;
+  font-family: 'Noto Serif JP', '游明朝', 'Yu Mincho', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom checkbox */
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #CCCCCC;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.custom-checkbox:checked {
+  border-color: #C5A059;
+  background-color: transparent;
+}
+
+.custom-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 5px;
+  height: 9px;
+  border: 1.5px solid #C5A059;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox:hover {
+  border-color: #C5A059;
+}
+
+/* Progress bar animation */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #C5A059 0%,
+    #D4B87A 40%,
+    #E8D09A 50%,
+    #D4B87A 60%,
+    #C5A059 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Divider line */
+.divider-gold {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #C5A059, transparent);
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
