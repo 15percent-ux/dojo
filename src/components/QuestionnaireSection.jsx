@@ -19,7 +19,7 @@ export default function QuestionnaireSection({ checked, onChange }) {
   const progressPercent = (totalChecked / 100) * 100;
 
   return (
-    <section className="relative py-24 px-6" style={{ backgroundColor: '#FAFAF8' }}>
+    <section className="relative" style={{ backgroundColor: '#FAFAF8', padding: 'clamp(80px, 10vw, 120px) clamp(32px, 8vw, 120px)' }}>
       <div className="max-w-3xl mx-auto">
 
         {/* Section header */}

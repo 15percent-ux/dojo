@@ -23,7 +23,7 @@ const eqItems = [
 
 export default function JohariEquationSection() {
   return (
-    <section style={{ backgroundColor: '#FAFAF8', padding: 'clamp(80px, 12vw, 160px) 24px' }}>
+    <section style={{ backgroundColor: '#FAFAF8', padding: 'clamp(80px, 12vw, 160px) clamp(32px, 8vw, 120px)' }}>
       <div
         style={{
           maxWidth: '720px',
